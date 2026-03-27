@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"> <!-- bean definitions here -->
+
+
+
+	<!-- <bean id="acc1" class="com.mainapp.Account" ></bean> -->
+	<!-- <bean id="std1" class="com.mainapp.Student" ></bean> -->
+
+
+
+	<!-- <bean id="employee" class="com.mainapp.Employee">
+		<property name="eid" value="123412"></property>
+		<property name="ename" value="raju"></property>
+		<property name="mapOfBooks">
+			<map>
+
+				<entry key="book1010" value-ref="acc1"></entry>
+				<entry key-ref="std1" value-ref="acc1"></entry>
+
+
+				<entry key="book1010" value="JAVABYSHUBHAM"></entry>
+				<entry key="book1011" value="SPRINGBYSHUBHAM"></entry>
+				<entry key="book1012" value="JAVAEEBYSHUBHAM"></entry>
+			</map>
+
+		</property>
+	</bean> -->
+
+
+
+
+
+
+
+
+   <!-- <bean id="acc1" class="com.mainapp.Account" ></bean> -->
+   <!-- <bean id="std1" class="com.mainapp.Student" ></bean> -->
+     
+  <!--  <bean id="employee" class="com.mainapp.Employee" >  
+        <property name="eid"  value="123412"></property>
+        <property name="ename"  value="raju"></property>
+        <property name="mapOfBooks" ref="myMap" > </property>
+    </bean>
+    
+    
+     STANDALONE Map
+     <util:map id="myMap" map-class="java.util.TreeMap"  >
+     
+      
+      <entry key="book1010" value-ref="acc1"></entry>
+       <entry key-ref="std1" value-ref="acc1"></entry> 
+       
+     <entry key="book1010" value="JAVABYSHUBHAM"></entry>
+				<entry key="book1011" value="SPRINGBYSHUBHAM"></entry>
+				<entry key="book1012" value="JAVAEEBYSHUBHAM"></entry>
+    </util:map>  -->
+
+
+
+
+
+
+    <bean id="employee" class="com.mainapp.Employee" >  
+        <property name="eid"  value="123412"></property>
+        <property name="ename"  value="raju"></property>
+        <property name="mapOfBooks" ref="myMap" > </property>
+    </bean>
+    
+    
+    <bean id="myMap" class="java.util.TreeMap" >
+    
+       <constructor-arg>
+          <map>
+             <entry key="book1010" value="JAVABYSHUBHAM"></entry>
+				<entry key="book1011" value="SPRINGBYSHUBHAM"></entry>
+				<entry key="book1012" value="JAVAEEBYSHUBHAM"></entry>
+          </map>
+       </constructor-arg>
+        
+    </bean>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</beans>
