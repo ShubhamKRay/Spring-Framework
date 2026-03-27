@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"> <!-- bean definitions here -->
+
+
+<!--  
+
+	<bean id="employee" class="com.mainapp.Employee">
+		<property name="eid" value="123412"></property>
+		<property name="ename" value="raju"></property>
+		<property name="setOfBooks">
+			<set>
+				<value>JAVABYSHUBHAM</value>
+				<value>SPRINGBYSHUBHAM</value>
+				<value>JAVAEEBYSHUBHAM</value>
+			</set>
+		</property>
+	</bean>
+
+-->
+
+
+
+<!--  
+	 <bean id="employee" class="com.mainapp.Employee" >
+	  <property name="eid" 
+		value="123412"></property> <property name="ename" value="raju"></property> 
+		<property name="setOfBooks" ref="mySet" > </property> 
+		
+		</bean> 
+		 
+		<util:set id="mySet" set-class="java.util.TreeSet" > 
+		        <value>JAVABYSHUBHAM</value> 
+		        <value>SPRINGBYSHUBHAM</value>
+		        <value>JAVAEEBYSHUBHAM</value>
+		 </util:set> 
+
+-->
+
+
+
+
+
+
+	 <bean id="employee" class="com.mainapp.Employee" > 
+	     <property name="eid" value="123412"></property>
+		 <property name="ename" value="raju"></property> 
+		 <property name="setOfBooks" ref="mySet" > </property>
+		
+		 </bean>
+		 
+	<bean id="mySet" 
+		class="java.util.TreeSet" > 
+		<constructor-arg> 
+		  <set> 
+		       <value>JAVABYSHUBHAM</value> 
+		       <value>SPRINGBYSHUBHAM</value>
+		       <value>JAVAEEBYSHUBHAM</value>
+		  </set>
+        </constructor-arg> 
+	</bean> 
+
+
+
+</beans>
