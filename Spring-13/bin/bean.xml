@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"> <!-- bean definitions here -->
+
+
+        <!-- MANULA WIRING -->
+     <!--   <bean id="employee" class="com.mainapp.Employee" >
+              <property name="eid"  value="123412"></property>
+              <property name="account"  ref="account" ></property>
+              <property name="car"   ref="car"></property>
+              <property name="listOfBooks"  ref="listOfBooks" ></property>
+        </bean>  
+        
+        <bean id="account" class="com.mainapp.Account" >
+            <property name="an" value="121212" > </property>
+            <property name="bankName" value="xyzBank" > </property>
+         </bean>
+         
+         <bean id="car" class="com.mainapp.Car" >
+            <property name="cn" value="9999" > </property>
+            <property name="carName" value="xyzCar" > </property>
+         </bean>
+         
+         <util:list id="listOfBooks">
+          <value>JavaByShubham</value>
+		<value>SpringByshubham</value>
+         </util:list>  -->
+
+<!-- ======================================================================= -->
+
+        <!-- Autowiring byName -->
+        <!--   <bean id="employee" class="com.mainapp.Employee" autowire="byName" >
+              <property name="eid"  value="123412"></property>
+        </bean>
+        
+         <bean id="account" class="com.mainapp.Account" >
+            <property name="an" value="121212" > </property>
+            <property name="bankName" value="xyzBank" > </property>
+         </bean>
+         
+         <bean id="car" class="com.mainapp.Car" >
+            <property name="cn" value="9999" > </property>
+            <property name="carName" value="xyzCar" > </property>
+         </bean>
+         
+         <util:list id="listOfBooks">
+           <value>JavaByShubham</value>
+		<value>SpringByshubham</value>
+         </util:list>  -->
+
+<!-- ====================================================================== -->
+
+
+        
+        <!-- Autowiring byType -->
+        
+       <!--  <bean id="employee" class="com.mainapp.Employee" autowire="byType" >
+              <property name="eid"  value="123412"></property>
+        </bean>
+        
+         <bean id="account1" class="com.mainapp.Account" primary="true" >
+            <property name="an" value="1212121"  > </property>
+            <property name="bankName" value="xyzBank1" > </property>
+         </bean>
+         
+          <bean id="account2" class="com.mainapp.Account" >
+            <property name="an" value="1212122" > </property>
+            <property name="bankName" value="xyzBank2" > </property>
+         </bean>
+         
+         <bean id="car1" class="com.mainapp.Car" >
+            <property name="cn" value="9999" > </property>
+            <property name="carName" value="xyzCar" > </property>
+         </bean>
+         
+         <util:list id="listOfBooks1">
+            <value>JavaByShubham</value>
+		<value>SpringByshubham</value>
+         </util:list>  -->
+
+
+<!-- =========================================================================== -->
+
+        <!-- Autowiring constructor -->
+        
+        <!--  <bean id="employee" class="com.mainapp.Employee" autowire="constructor" >
+              <property name="eid"  value="123412"></property>
+        </bean>
+        
+         <bean id="account1" class="com.mainapp.Account" primary="true" >
+            <property name="an" value="12121211" > </property>
+            <property name="bankName" value="xyzBank1" > </property>
+         </bean>
+         
+         <bean id="account2" class="com.mainapp.Account"  >
+            <property name="an" value="12121222" > </property>
+            <property name="bankName" value="xyzBank2" > </property>
+         </bean>
+         
+         <bean id="car1" class="com.mainapp.Car" >
+            <property name="cn" value="9999" > </property>
+            <property name="carName" value="xyzCar" > </property>
+         </bean>
+         
+         <util:list id="listOfBooks1">
+             <value>JavaByShubham</value>
+		<value>SpringByshubham</value>
+         </util:list> -->
+        
+
+
+
+
+
+<!-- ====================================================================== -->
+
+    
+       
+
+<!-- ......   Autowiring default & No    ............... -->
+
+	 <bean id="employee" class="com.mainapp.Employee"
+		autowire="default">
+		<property name="eid" value="1234111"></property>
+	</bean>
+
+	<bean id="employee2" class="com.mainapp.Employee2"
+		autowire="byType">
+		<property name="eid" value="1234222"></property>
+
+	</bean>
+
+	<bean id="account" class="com.mainapp.Account" primary="true">
+		<property name="an" value="12121211"></property>
+		<property name="bankName" value="xyzBank1"></property>
+	</bean>
+
+	<bean id="car" class="com.mainapp.Car">
+		<property name="cn" value="9999"></property>
+		<property name="carName" value="xyzCar"></property>
+
+	</bean>
+
+	<util:list id="listOfBooks">
+		<value>JavaByShubham</value>
+		<value>SpringByshubham</value>
+
+	</util:list>
+ 
+
+</beans>
