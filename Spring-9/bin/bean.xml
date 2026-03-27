@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"> <!-- bean definitions here -->
+
+
+
+	<bean id="employee" class="com.mainapp.Employee" >  
+        <property name="eid"  value="123412"></property>  
+        <property name="ename"  value="raju"></property>  
+        <property name="listOfBooks">
+           
+           <list > 
+             <value>JAVABYSHUBHAM</value>
+             <value>SPRINGBYSHUBHAM</value>
+             <value>JAVAEEBYSHUBHAM</value>
+           </list>
+        </property>
+    </bean>  
+
+	
+	
+	
+
+	
+	
+	<!--  
+	    
+    <bean id="employee" class="com.mainapp.Employee" >  
+        <property name="eid"  value="123412"></property>
+        <property name="ename"  value="raju"></property>
+        <property name="listOfBooks" ref="myList" > </property>
+    </bean>
+    
+    
+        STANDALONE LIST
+    <util:list id="myList" list-class="java.util.LinkedList" >
+       <value>JAVABYSHUBHAM</value>
+             <value>SPRINGBYSHUBHAM</value>
+             <value>JAVAEEBYSHUBHAM</value>
+    </util:list> 
+	
+	
+	-->
+	
+	
+	
+	
+	
+	<!-- 
+	
+	     <bean id="employee" class="com.mainapp.Employee" >  
+        <property name="eid"  value="123412"></property>
+        <property name="ename"  value="raju"></property>
+        <property name="listOfBooks" ref="myList" > </property>
+    </bean>
+    
+    
+    <bean id="myList" class="java.util.LinkedList" >
+    
+       <constructor-arg>
+          <list>
+            <value>JAVABYSHUBHAM</value>
+             <value>SPRINGBYSHUBHAM</value>
+             <value>JAVAEEBYSHUBHAM</value>
+          </list>
+       </constructor-arg>
+        
+    </bean> 
+	
+	
+	-->
+	
+	
+	
+	<!-- ................................................................ -->
+	
+	<!-- 
+	
+	   <bean id="acc1" class="com.mainapp.Account" > </bean>
+    <bean id="acc2" class="com.mainapp.Account" > </bean>
+    <bean id="acc3" class="com.mainapp.Account" > </bean>
+    
+    <bean id="employee" class="com.mainapp.Employee" >  
+        <property name="eid"  value="123412"></property>
+        <property name="ename"  value="raju"></property>
+        <property name="listOfAccount">
+           <list>
+             <ref bean="acc1"  />
+             <ref bean="acc1"  />
+             <ref bean="acc1"  />
+           </list>
+        </property>
+    </bean>  
+    
+    
+    
+    -->
+    
+    
+    
+    
+   <!--  
+   
+    <bean id="acc1" class="com.mainapp.Account" > </bean>
+    <bean id="acc2" class="com.mainapp.Account" > </bean>
+    <bean id="acc3" class="com.mainapp.Account" > </bean>
+   
+    <util:list id="myList" list-class="java.util.LinkedList" >
+        <ref bean="acc1"  />
+        <ref bean="acc1"  />
+        <ref bean="acc1"  />
+    </util:list>
+    
+     <bean id="employee" class="com.mainapp.Employee" >  
+        <property name="eid"  value="123412"></property>
+        <property name="ename"  value="raju"></property>
+        <property name="listOfAccount" ref="myList" > </property>
+    </bean> -->
+	
+	
+	
+	
+	<!--  
+	    <bean id="acc1" class="com.mainapp.Account" > </bean>
+    <bean id="acc2" class="com.mainapp.Account" > </bean>
+    <bean id="acc3" class="com.mainapp.Account" > </bean>
+    
+     <bean id="employee" class="com.mainapp.Employee" >  
+        <property name="eid"  value="123412"></property>
+        <property name="ename"  value="raju"></property>
+        <property name="listOfAccount" ref="myList" > </property>
+    </bean>
+    
+    
+    <bean id="myList" class="java.util.LinkedList" >
+    
+       <constructor-arg>
+          <list>
+             <ref bean="acc1"  />
+             <ref bean="acc1"  />
+             <ref bean="acc1"  />
+          </list>
+       </constructor-arg>
+        
+    </bean>
+	
+	
+	  -->
+	
+	
+	
+	
+	
+
+</beans>
